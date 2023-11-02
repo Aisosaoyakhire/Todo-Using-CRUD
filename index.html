@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Todoist</title>
+</head>
+
+<body class="m-10">
+    <header class="bg-purple-200 p-10 max-w-auto text-center">
+        <h1 class=" text-3xl">To-do List</h1>
+        <p>Plan your day...</p>
+    </header>
+    <section class="bg-white text-center items-center justify-center">
+        <div class="flex gap-3 text-center items-center justify-center">
+            <input type="text" id="todo-input" placeholder="What are you doing today?"
+                class="mt-5 border border-l p-6 w-[60%] rounded-md">
+            <button type="button" onclick="createTodo()"
+                class="bg-purple-800 p-6 w-[150px] text-white mt-5 rounded-md hover:bg-purple-500">Add</button>
+        </div>
+    </section>
+    <span id="Form-message" class="hidden text-red-600 text-center text-xs"></span>
+    <section class="bg-purple-200 p-6 m-10 text-center items-center justify-center rounded-md" id="todo-list-container">
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
