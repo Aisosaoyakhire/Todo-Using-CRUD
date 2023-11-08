@@ -2,31 +2,28 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>TodoList</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
+    <title>Preview page</title>
 </head>
 
 <body>
-    <header>
-        <main class="px-5 py-4 max-w-lg mx-auto">
-            <h1 class="text-4xl text-slate-700 font-medium">TodoList</h1>
 
-    </header>
-    <main class="px-5 mt-5 max-w-lg mx-auto">
-        <section id="todo_preview_container">
-            <section class="flex justify-between items-center">
+    <div class="container w-full min-h-screen p-[10px]">
+        <div class="todo w-full max-w-[540px] bg-purple-200 mx-auto my-20 p-10 rounded-lg shadow-inner shadow-black">
+            <h2 class="flex items-center mb-[20px] text-[30px] italic">
+                Preview
+            </h2>
 
-            </section>
-            <section class="mt-3"></section>
-            <section class="mt-10">
 
-            </section>
-
-    </main>
+            <section id="previewPage"></section>
 </body>
-<script src="./utils.js"></script>
-<script src="./preview-todo.js"></script>
+
+<script src="preview.js"></script>
+<script src="script.js"></script>
 
 </html>

@@ -2,31 +2,41 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T0-DO List</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <title>Todoist</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
-<body class="m-10">
-    <header class="bg-purple-200 p-10 max-w-auto text-center">
-        <h1 class=" text-3xl">To-do List</h1>
-        <p>Plan your day...</p>
-    </header>
-    <section class="bg-white text-center items-center justify-center">
-        <div class="flex gap-3 text-center items-center justify-center">
-            <input type="text" id="todo-input" placeholder="What are you doing today?"
-                class="mt-5 border border-l p-6 w-[60%] rounded-md">
-            <button type="button" onclick="createTodo()"
-                class="bg-purple-800 p-6 w-[150px] text-white mt-5 rounded-md hover:bg-purple-500">Add</button>
+<body>
+    <section>
+        <div class="container w-full min-h-screen p-[10px]">
+            <div
+                class="todo w-full max-w-[540px] bg-purple-100 mx-auto my-20 p-10 rounded-lg shadow-inner shadow-black">
+                <h2 class="flex items-center mb-[20px] text-[30px] italic">
+                    Plan Your Day
+                </h2>
+                <div class="input-button flex items-center justify-between bg-[#e1d8d8] rounded-[30px] pl-5 mb-5">
+                    <input
+                        class="font-semibold p-[10px] bg-[transparent] border-0 flex-1 outline-none focus:bg-white focus: rounded-[30px]"
+                        type="text" id="input-box" placeholder="what will you be doing today?" />
+                    <button onclick="addTask()"
+                        class="border-0 outline-none py-[16px] px-[50px] bg-purple-900 text-[16px] text-white rounded-[40px]">
+                        Add Task
+                    </button>
+                </div>
+                <span class="hidden flex flex-center" id="errorMessage"></span>
+                <ul id="task-list" class="flex flex-col gap-6">
+                    <!-- <li class="checked">Task 1</li>
+                    <li>Task 2</li>
+                    <li>Task 3</li>  -->
+                </ul>
+            </div>
         </div>
     </section>
-    <span id="Form-message" class="hidden text-red-600 text-center text-xs"></span>
-    <section class="bg-purple-200 p-6 m-10 text-center items-center justify-center rounded-md" id="todo-list-container">
-    </section>
-
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
